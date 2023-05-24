@@ -32,7 +32,7 @@ nav {
     display: block;
     gap: 0.8rem;
     left: 50%;
-    padding: 0.7rem 1.7rem;
+    padding: 0.5rem 1.7rem;
     position: fixed;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -70,13 +70,22 @@ a:hover{
 .row{
     justify-content: center;
 }
-@media screen and (max-width:500px){
-    .header-socials{
-        left: 20rem;
-        bottom: 28rem;
-        font-size: 0.8rem;
-        
-    }}
+.header-socials {
+    align-items: center;
+    bottom: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    left: 0;
+    position: absolute;
+    margin-left: 2rem;
+}
+.header-socials:after {
+    background: var(--color-primary);
+    content: "";
+    height: 2rem;
+    width: 1px;
+}
     @media screen and (max-width:500px){
         .header-socials{
             display: none;
@@ -629,3 +638,4 @@ input, textarea {
         margin-top: 2rem;
     }
 }
+
